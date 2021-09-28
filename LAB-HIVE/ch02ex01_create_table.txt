@@ -1,0 +1,17 @@
+
+CREATE EXTERNAL TABLE IF NOT EXISTS rating_project.population_census
+ (county string COMMENT "County",population int)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t' 
+LOCATION '/user/cloudera/bigdata_project/hive/population_census';
+
+
+
+CREATE EXTERNAL TABLE IF NOT EXISTS rating_project.rating
+ (userid int, itemid int, rating int, timestamp string)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY '\t' 
+LOCATION '/user/cloudera/bigdata_project/hive/rating';
+
+
+
+select  rating.count(*) from rating
+group by rating;

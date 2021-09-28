@@ -1,0 +1,6 @@
+SELECT a.county, a.population, b.population
+From (select * from dihps.population_census2 
+where year = 2010) a
+left join (select * from dihps.population_census2 
+where population > 50000 and year = 2011) b
+on a.county = b.county; 

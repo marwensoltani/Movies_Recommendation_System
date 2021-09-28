@@ -1,0 +1,5 @@
+SELECT a.county, a.population, b.population
+From dihps.population_census2 a
+Inner join dihps.population_census2 b
+on a.county = b.county
+where a.year = 2010 and b.year = 2011;

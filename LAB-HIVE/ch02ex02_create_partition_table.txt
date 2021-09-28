@@ -1,0 +1,22 @@
+
+CREATE EXTERNAL TABLE IF NOT EXISTS dihps.population_census2
+ (county string COMMENT "County", population int)
+PARTITIONED BY (year int COMMENT "Year (YYYY) of census")
+ROW FORMAT DELIMITED
+        FIELDS TERMINATED BY '\t'
+LOCATION '/user/student/DIHPS/population_census2';
+
+ALTER TABLE dihps.population_census2 ADD IF NOT EXISTS PARTITION (year = 2010)
+ LOCATION '/user/student/DIHPS/population_census2/year=2010';
+ 
+ALTER TABLE dihps.population_census2 ADD IF NOT EXISTS PARTITION (year = 2011)
+ LOCATION '/user/student/DIHPS/population_census2/year=2011';
+
+ALTER TABLE dihps.population_census2 ADD IF NOT EXISTS PARTITION (year = 2012)
+ LOCATION '/user/student/DIHPS/population_census2/year=2012';
+ 
+ ALTER TABLE dihps.population_census2 ADD IF NOT EXISTS PARTITION (year = 2013)
+ LOCATION '/user/student/DIHPS/population_census2/year=2013';
+ 
+ ALTER TABLE dihps.population_census2 ADD IF NOT EXISTS PARTITION (year = 2014)
+ LOCATION '/user/student/DIHPS/population_census2/year=2014';

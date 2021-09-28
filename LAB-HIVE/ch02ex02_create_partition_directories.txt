@@ -1,0 +1,5 @@
+hdfs dfs -mkdir -p /user/student/DIHPS/population_census2/year=2010;
+hdfs dfs -mkdir -p /user/student/DIHPS/population_census2/year=2011;
+hdfs dfs -mkdir -p /user/student/DIHPS/population_census2/year=2012;
+hdfs dfs -mkdir -p /user/student/DIHPS/population_census2/year=2013;
+hdfs dfs -mkdir -p /user/student/DIHPS/population_census2/year=2014;

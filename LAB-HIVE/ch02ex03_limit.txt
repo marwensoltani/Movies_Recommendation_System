@@ -1,0 +1,1 @@
+SELECT * FROM dihps.population_census LIMIT 10;

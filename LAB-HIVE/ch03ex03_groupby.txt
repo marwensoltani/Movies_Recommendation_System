@@ -1,0 +1,3 @@
+SELECT year, SUM(population)total_population
+FROM dihps.population_census2
+group by year;
